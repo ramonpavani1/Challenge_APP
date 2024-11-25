@@ -50,7 +50,7 @@
             android:id="@+id/inputAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Endereço"
+            android:hint="Email"
             android:background="#BDBDBD"
             android:padding="10dp"
             android:layout_marginBottom="10dp" />
@@ -59,7 +59,7 @@
             android:id="@+id/inputPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="phone"
+            android:hint="Celular"
             android:background="#BDBDBD"
             android:padding="10dp"
             android:layout_marginBottom="20dp" />
