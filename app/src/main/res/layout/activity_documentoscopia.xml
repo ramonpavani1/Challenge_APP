@@ -9,8 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:text="Biometria Digital"
+        android:layout_marginTop="30dp"
+        android:text="Documentoscopia"
         android:textSize="30sp"
         android:textColor="#424242" />
 
@@ -19,8 +19,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
-        android:text="Aguardando autenticação..."
+        android:layout_marginTop="200dp"
+        android:text="Aguardando captura de documento..."
         android:textSize="18sp"
         android:textColor="#BDBDBD"
         android:visibility="gone" />
@@ -35,13 +35,13 @@
         android:visibility="gone" />
 
     <View
-        android:id="@+id/fingerprintPlaceholder"
-        android:layout_width="150dp"
-        android:layout_height="250dp"
+        android:id="@+id/documentCapturePlaceholder"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/title"
         android:layout_marginTop="40dp"
-        android:background="@drawable/rounded_background" />
+        android:background="@drawable/document_placeholder" />
 
     <Button
         android:id="@+id/btnValidate"
@@ -50,8 +50,8 @@
         android:background="@drawable/rounded_background"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:layout_below="@id/fingerprintPlaceholder"
-        android:text="Autenticar"
+        android:layout_below="@id/documentCapturePlaceholder"
+        android:text="Validar Documento"
         android:textSize="20sp"
         android:textColor="#424242" />
 </RelativeLayout>

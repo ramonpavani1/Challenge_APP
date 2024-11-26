@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E0E0E0"
@@ -9,21 +10,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:text="Biometria Digital"
+        android:layout_marginTop="40dp"
+        android:text="SIM SWAP"
         android:textSize="30sp"
-        android:textColor="#424242" />
+        android:textColor="#424242"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/statusMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
-        android:text="Aguardando autenticação..."
+        android:layout_marginTop="200dp"
+        android:text="Verificando troca de chip..."
         android:textSize="18sp"
         android:textColor="#BDBDBD"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:ignore="HardcodedText" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -31,17 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/title"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="400dp"
         android:visibility="gone" />
-
-    <View
-        android:id="@+id/fingerprintPlaceholder"
-        android:layout_width="150dp"
-        android:layout_height="250dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/title"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/rounded_background" />
 
     <Button
         android:id="@+id/btnValidate"
@@ -49,9 +43,9 @@
         android:layout_height="60dp"
         android:background="@drawable/rounded_background"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:layout_below="@id/fingerprintPlaceholder"
-        android:text="Autenticar"
+        android:layout_marginTop="500dp"
+        android:text="Validar"
         android:textSize="20sp"
-        android:textColor="#424242" />
+        android:textColor="#424242"
+        tools:ignore="HardcodedText" />
 </RelativeLayout>

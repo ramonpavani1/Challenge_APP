@@ -3,45 +3,55 @@
     android:layout_height="match_parent"
     android:background="#E0E0E0"
     android:padding="16dp">
-    <Button
-        android:id="@+id/btnHome"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:background="@drawable/botao_inicio"
-        android:contentDescription="Home" />
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="30dp"
         android:text="Biometria Facial"
         android:textSize="30sp"
         android:textColor="#424242" />
 
-    <View
-        android:id="@+id/faceCapturePlaceholder"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
+    <TextView
+        android:id="@+id/statusMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:text="Aguardando autenticação..."
+        android:textSize="18sp"
+        android:textColor="#BDBDBD"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/title"
         android:layout_marginTop="40dp"
-        android:background="#BDBDBD" />
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/faceCapturePlaceholder"
+        android:layout_width="350dp"
+        android:layout_height="450dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/title"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_background" />
 
     <Button
-        android:id="@+id/btnConfig"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:background="@drawable/config_icon"
-        android:contentDescription="Configurações" />
+        android:id="@+id/btnValidate"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_background"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/faceCapturePlaceholder"
+        android:text="Autenticar"
+        android:textSize="20sp"
+        android:textColor="#424242" />
 </RelativeLayout>

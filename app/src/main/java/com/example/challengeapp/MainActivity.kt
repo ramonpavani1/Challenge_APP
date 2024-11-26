@@ -1,47 +1,61 @@
 package com.example.challengeapp
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.challengeapp.ui.theme.ChallengeAPPTheme
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+import androidx.appcompat.app.AppCompatActivity
+import com.example.quodsimulator.BiometriaFacial
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var menuSpinner: Spinner
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            ChallengeAPPTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+        setContentView(R.layout.activity_home)
+
+        menuSpinner = findViewById(R.id.menuSpinner)
+
+        val options = listOf(
+            "Selecione uma opção",
+            "Biometria Facial",
+            "Biometria Digital",
+            "Documentoscopia",
+            "SIM Swap",
+            "Autenticação Cadastral",
+            "Score Antifraude"
+        )
+
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, options)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        menuSpinner.adapter = adapter
+
+        menuSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                when (position) {
+                    1 -> navigateToActivity(BiometriaFacial::class.java)
+                    2 -> navigateToActivity(BiometriaDigital::class.java)
+                    3 -> navigateToActivity(Documentoscopia::class.java)
+                    4 -> navigateToActivity(SimSwap::class.java)
+                    5 -> navigateToActivity(AutenticacaoCadastral::class.java)
                 }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
             }
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ChallengeAPPTheme {
-        Greeting("Android")
+    private fun navigateToActivity(activityClass: Class<*>) {
+        val intent = Intent(this, activityClass)
+        startActivity(intent)
     }
 }
