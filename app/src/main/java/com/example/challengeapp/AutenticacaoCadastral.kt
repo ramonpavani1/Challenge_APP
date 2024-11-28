@@ -28,12 +28,12 @@ class AutenticacaoCadastral : AppCompatActivity() {
         btnSubmit = findViewById(R.id.btnSubmit)
 
         btnSubmit.setOnClickListener {
-            simulateCadastroValidation()
+            CadastroValidacao()
         }
     }
 
     @SuppressLint("SetTextI18n")
-    private fun simulateCadastroValidation() {
+    private fun CadastroValidacao() {
         val cpf = inputCPF.text.toString()
         val name = inputName.text.toString()
         val email = inputEmail.text.toString()
