@@ -22,11 +22,11 @@ class Documentoscopia : AppCompatActivity() {
         btnValidate = findViewById(R.id.btnValidate)
 
         btnValidate.setOnClickListener {
-            simulateDocumentValidation()
+            DocumentoValidacao()
         }
     }
 
-    private fun simulateDocumentValidation() {
+    private fun DocumentoValidacao() {
         statusMessage.visibility = View.VISIBLE
         progressBar.visibility = View.VISIBLE
         statusMessage.text = "Validando documento..."
