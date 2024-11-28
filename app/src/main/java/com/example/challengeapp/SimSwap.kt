@@ -31,7 +31,7 @@ class SimSwap : AppCompatActivity() {
         progressBar.visibility = View.VISIBLE
         statusMessage.text = "Verificando troca de chip..."
 
-        // Simulação de verificação de SIM Swap
+        
         progressBar.postDelayed({
             statusMessage.text = "Troca de chip verificada com sucesso!"
             progressBar.visibility = View.GONE
