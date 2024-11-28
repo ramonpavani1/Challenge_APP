@@ -41,11 +41,11 @@ class MainActivity : AppCompatActivity() {
                 id: Long
             ) {
                 when (position) {
-                    1 -> navigateToActivity(BiometriaFacial::class.java)
-                    2 -> navigateToActivity(BiometriaDigital::class.java)
-                    3 -> navigateToActivity(Documentoscopia::class.java)
-                    4 -> navigateToActivity(SimSwap::class.java)
-                    5 -> navigateToActivity(AutenticacaoCadastral::class.java)
+                    1 -> navegarAtividade(BiometriaFacial::class.java)
+                    2 -> navegarAtividade(BiometriaDigital::class.java)
+                    3 -> navegarAtividade(Documentoscopia::class.java)
+                    4 -> navegarAtividade(SimSwap::class.java)
+                    5 -> navegarAtividade(AutenticacaoCadastral::class.java)
                 }
             }
 
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun navigateToActivity(activityClass: Class<*>) {
+    private fun navegarAtividade(activityClass: Class<*>) {
         val intent = Intent(this, activityClass)
         startActivity(intent)
     }
