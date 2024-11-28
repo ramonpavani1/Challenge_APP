@@ -24,7 +24,7 @@ class BiometriaFacial : AppCompatActivity() {
             statusMessage.visibility = View.VISIBLE
             statusMessage.text = "Analisando face..."
 
-            // Simula o processamento com delay
+            
             Handler(Looper.getMainLooper()).postDelayed({
                 progressBar.visibility = View.GONE
                 val success = simulateValidation()
