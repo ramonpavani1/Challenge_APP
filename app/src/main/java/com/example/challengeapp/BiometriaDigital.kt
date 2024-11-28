@@ -34,7 +34,7 @@ class BiometriaDigital : AppCompatActivity() {
                     statusMessage.text = "Erro na validação da biometria."
                     statusMessage.setTextColor(resources.getColor(android.R.color.holo_red_dark))
                 }
-            }, 3000) // 3 segundos de delay
+            }, 3000)
         }
     }
 
