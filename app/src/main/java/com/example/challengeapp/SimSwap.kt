@@ -22,11 +22,11 @@ class SimSwap : AppCompatActivity() {
         btnValidate = findViewById(R.id.btnValidate)
 
         btnValidate.setOnClickListener {
-            simulateSimSwapValidation()
+            SimSwapValidacao()
         }
     }
 
-    private fun simulateSimSwapValidation() {
+    private fun SimSwapValidacao() {
         statusMessage.visibility = View.VISIBLE
         progressBar.visibility = View.VISIBLE
         statusMessage.text = "Verificando troca de chip..."
