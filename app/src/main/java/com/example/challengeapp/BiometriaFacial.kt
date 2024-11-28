@@ -27,7 +27,7 @@ class BiometriaFacial : AppCompatActivity() {
             
             Handler(Looper.getMainLooper()).postDelayed({
                 progressBar.visibility = View.GONE
-                val success = simulateValidation()
+                val success = Validacao()
 
                 if (success) {
                     statusMessage.text = "Usuário autenticado com sucesso!"
@@ -40,7 +40,7 @@ class BiometriaFacial : AppCompatActivity() {
         }
     }
 
-    private fun simulateValidation(): Boolean {
+    private fun Validacao(): Boolean {
         return (0..1).random() == 1
     }
 }
